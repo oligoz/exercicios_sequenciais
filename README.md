@@ -2,7 +2,8 @@
 # Curso DESENVOLVER APLICACOES BACK-END PARA WEB (BOT - 2025.2)
 
 ## Lista de exercicios sequenciais
-
+>[!NOTE]
+> Projeto feito em Java com Netbeans
 
 1. Faça um programa que leia quatro números informados pelo usuário e 
 que depois imprima a média ponderada, sabendo-se que os pesos são 

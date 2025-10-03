@@ -190,6 +190,122 @@ public class Executar {
         valor = scanner.nextFloat();
         System.out.println("O valor sera: R$" + (valor+(valor*0.45)+(valor*0.55*0.28)));
     }
+    
+    static void Ex13(){
+        Scanner scanner = new Scanner(System.in);
+        float lado;
+        System.out.println("Informe o lado do quadrado:");
+        lado = scanner.nextFloat();
+        System.out.println("O perimetro sera: " + lado*4 + "\nA area sera: " + Math.pow(lado, 2));
+    }
+    
+    static void Ex14(){
+        Scanner scanner = new Scanner(System.in);
+        float salario;
+        System.out.println("Informe o salario:");
+        salario = scanner.nextFloat();
+        System.out.println("O novo salario sera: R$" + salario*1.37);
+    }
+    
+    static void Ex15(){
+        Scanner scanner = new Scanner(System.in);
+        int segundos;
+        int horas;
+        int minutos;
+        System.out.println("Informe o tempo em segundos:");
+        segundos = scanner.nextInt();
+        minutos = (int)Math.floor(segundos/60);
+        segundos = segundos%60;
+        horas = (int)Math.floor(minutos/60);
+        minutos = minutos%60;
+        System.out.println("O tempo ser: " + horas + "h " + minutos + "m " + segundos + "s");
+    }
+    
+    static void Ex16(){
+        Scanner scanner = new Scanner(System.in);
+        int anoNascimento;
+        int anoAtual;
+        System.out.println("Informe o ano de nascimento:");
+        anoNascimento = scanner.nextInt();
+        System.out.println("Informe o ano atual:");
+        anoAtual = scanner.nextInt();
+        System.out.println("Idade atual: " + (anoAtual-anoNascimento) + "\nIdade em 2028: " + (2028-anoNascimento));
+    }
+    
+    static void Ex17(){
+        Scanner scanner = new Scanner(System.in);
+        float aplicacao;
+        float juros;
+        System.out.println("Informe a aplicacao:");
+        aplicacao = scanner.nextFloat();
+        System.out.println("Informe o juros (%):");
+        juros = scanner.nextFloat();
+        System.out.println("Rendimento: " + (aplicacao*juros/100) + "\nValor final: " + (aplicacao*(1+juros/100)));
+    }
+    
+    static void Ex18(){
+        Scanner scanner = new Scanner(System.in);
+        float alturaDegrau;
+        float alturaObj;
+        System.out.println("Informe a altura do degrau (cm):");
+        alturaDegrau = scanner.nextFloat();
+        System.out.println("Informe a altura que deseja alcancar (m):");
+        alturaObj = scanner.nextFloat();
+        System.out.println("Quantidade de degraus: " + (alturaObj*100/alturaDegrau));
+    }
+    
+    static void Ex19(){
+        Scanner scanner = new Scanner(System.in);
+        float peso;
+        float altura;
+        System.out.println("Informe o peso (Kg):");
+        peso = scanner.nextFloat();
+        System.out.println("Informe a altura (m):");
+        altura = scanner.nextFloat();
+        System.out.println("imc: " + (peso/Math.pow(altura, 2)));
+    }
+    
+    static void Ex20(){
+        Scanner scanner = new Scanner(System.in);
+        int num1;
+        int num2;
+        System.out.println("Informe o primeiro numero:");
+        num1 = scanner.nextInt();
+        System.out.println("Informe o segundo numero:");
+        num2 = scanner.nextInt();
+        System.out.println("Potencia: " + Math.pow(num1, num2));
+    }
+    
+    static void Ex21(){
+        Scanner scanner = new Scanner(System.in);
+        int numApt;
+        float valorDiaria;
+        float valorProm;
+        System.out.println("Informe o numero de apartamentos:");
+        numApt = scanner.nextInt();
+        System.out.println("Informe o valor da diaria:");
+        valorDiaria = scanner.nextFloat();
+        valorProm = valorDiaria*0.75f;
+        System.out.println("Valor promocional: R$" + valorProm);
+        System.out.println("Valor total arrecadado com 100% de ocupacao: R$" + (valorProm*2*numApt));
+        System.out.println("Valor total arrecadado com 70% de ocupacao: R$" + (valorProm*2*Math.floor(numApt*0.7)));
+        System.out.println("Valor que deixara de ser arrecadado com 100% de ocupacao: R$" + ((valorDiaria*0.25)*2*numApt));
+    }
+    
+    static void Ex22(){
+        Scanner scanner = new Scanner(System.in);
+        float salario;
+        float consumo;
+        float valorKw;
+        System.out.println("Informe o salario minimo:");
+        salario = scanner.nextFloat();
+        System.out.println("Informe o consumo de Kw:");
+        consumo = scanner.nextFloat();
+        valorKw = salario*0.2f;
+        System.out.println("Valor do Kw: R$" + valorKw);
+        System.out.println("Valor a ser pago: R$" + valorKw*consumo);
+        System.out.println("Valor a ser pago com 15% de desconto: R$" + valorKw*consumo*0.85);
+    }
 
     public static void main(String[] args) {
 //        Ex1();
@@ -203,7 +319,17 @@ public class Executar {
 //        Ex9();
 //        Ex10();
 //        Ex11();
-        Ex12();
+//        Ex12();
+//        Ex13();
+//        Ex14();
+//        Ex15();
+//        Ex16();
+//        Ex17();
+//        Ex18();
+//        Ex19();
+//        Ex20();
+//        Ex21();
+        Ex22();
     }
 
 }
