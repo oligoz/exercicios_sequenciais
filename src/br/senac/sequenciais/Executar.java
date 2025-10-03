@@ -181,6 +181,15 @@ public class Executar {
         percentual = scanner.nextFloat();
         System.out.println("O valor sera: R$" + valor*(1+percentual/100));
     }
+    
+    static void Ex12(){
+        Scanner scanner = new Scanner(System.in);
+        float valor;
+        float percentual;
+        System.out.println("Informe o valor de fabrica:");
+        valor = scanner.nextFloat();
+        System.out.println("O valor sera: R$" + (valor+(valor*0.45)+(valor*0.55*0.28)));
+    }
 
     public static void main(String[] args) {
 //        Ex1();
@@ -193,7 +202,8 @@ public class Executar {
 //        Ex8();
 //        Ex9();
 //        Ex10();
-        Ex11();
+//        Ex11();
+        Ex12();
     }
 
 }
