@@ -170,6 +170,17 @@ public class Executar {
         valor = scanner.nextFloat();
         System.out.println("Valor das prestacoes: R$" + valor/5);
     }
+    
+    static void Ex11(){
+        Scanner scanner = new Scanner(System.in);
+        float valor;
+        float percentual;
+        System.out.println("Informe o valor:");
+        valor = scanner.nextFloat();
+        System.out.println("Informe o acrescimo percentual (%):");
+        percentual = scanner.nextFloat();
+        System.out.println("O valor sera: R$" + valor*(1+percentual/100));
+    }
 
     public static void main(String[] args) {
 //        Ex1();
@@ -181,7 +192,8 @@ public class Executar {
 //        Ex7();
 //        Ex8();
 //        Ex9();
-        Ex10();
+//        Ex10();
+        Ex11();
     }
 
 }
