@@ -306,30 +306,137 @@ public class Executar {
         System.out.println("Valor a ser pago: R$" + valorKw*consumo);
         System.out.println("Valor a ser pago com 15% de desconto: R$" + valorKw*consumo*0.85);
     }
+    
+    static void Ex23(){
+        Scanner scanner = new Scanner(System.in);
+        float gasto;
+        float ingresso;
+        System.out.println("Informe o custo do espetaculo:");
+        gasto = scanner.nextFloat();
+        System.out.println("Informe o valor do ingresso:");
+        ingresso = scanner.nextFloat();
+        System.out.println("Precisa vender " + (int)Math.ceil(gasto/ingresso) + " ingressos para alcancar o custo.");
+        System.out.println("Precisa vender " + (int)Math.ceil((gasto*1.23)/ingresso) + " ingressos para ter 23% de lucro.");
+    }
+    
+    static void Ex24(){
+        Scanner scanner = new Scanner(System.in);
+        float tempo;
+        float velocidade;
+        System.out.println("Informe o tempo gasto (h):");
+        tempo = scanner.nextFloat();
+        System.out.println("Informe o velocidade media (Km/h):");
+        velocidade = scanner.nextFloat();
+        System.out.println("Gasolina gasta: " + (tempo*velocidade/12) + " litros.");
+    }
+    
+    static void Ex25(){
+        Scanner scanner = new Scanner(System.in);
+        int totalEleitores;
+        int votos1;
+        int votos2;
+        float percentual1;
+        float percentual2;
+        float percentualNulos;
+        System.out.println("Informe o total de eleitores:");
+        totalEleitores = scanner.nextInt();
+        System.out.println("Informe o numero de votos do primeiro candidato:");
+        votos1 = scanner.nextInt();
+        System.out.println("Informe o numero de votos do segundo candidato:");
+        votos2 = scanner.nextInt();
+        percentual1 = (float)votos1/totalEleitores*100;
+        percentual2 = (float)votos2/totalEleitores*100;
+        percentualNulos = (float)(totalEleitores-(votos1+votos2))/totalEleitores*100;
+        System.out.println("Percentual de votos do primeiro candidato: " + (int)percentual1 + "%");
+        System.out.println("Percentual de votos do segundo candidato: " + (int)percentual2 + "%");
+        System.out.println("Percentual de votos nulos: " + (int)percentualNulos + "%");
+    }
 
     public static void main(String[] args) {
-//        Ex1();
-//        Ex2();
-//        Ex3();
-//        Ex4();
-//        Ex5();
-//        Ex6();
-//        Ex7();
-//        Ex8();
-//        Ex9();
-//        Ex10();
-//        Ex11();
-//        Ex12();
-//        Ex13();
-//        Ex14();
-//        Ex15();
-//        Ex16();
-//        Ex17();
-//        Ex18();
-//        Ex19();
-//        Ex20();
-//        Ex21();
-        Ex22();
+        int exercicio;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qual exercicio?");
+        exercicio = scanner.nextInt();
+        switch (exercicio){
+            case 1:
+                Ex1();
+                break;
+            case 2:
+                Ex2();
+                break;
+            case 3:
+                Ex3();
+                break;
+            case 4:
+                Ex4();
+                break;
+            case 5:
+                Ex5();
+                break;
+            case 6:
+                Ex6();
+                break;
+            case 7:
+                Ex7();
+                break;
+            case 8:
+                Ex8();
+                break;
+            case 9:
+                Ex9();
+                break;
+            case 10:
+                Ex10();
+                break;
+            case 11:
+                Ex11();
+                break;
+            case 12:
+                Ex12();
+                break;
+            case 13:
+                Ex13();
+                break;
+            case 14:
+                Ex14();
+                break;
+            case 15:
+                Ex15();
+                break;
+            case 16:
+                Ex16();
+                break;
+            case 17:
+                Ex17();
+                break;
+            case 18:
+                Ex18();
+                break;
+            case 19:
+                Ex19();
+                break;
+            case 20:
+                Ex20();
+                break;
+            case 21:
+                Ex21();
+                break;
+            case 22:
+                Ex22();
+                break;
+            case 23:
+                Ex23();
+                break;
+            case 24:
+                Ex24();
+                break;
+            case 25:
+                Ex25();
+                break;
+            default:
+                System.out.println("Exercicio nao existe.");
+                break;
+        }
     }
 
 }
